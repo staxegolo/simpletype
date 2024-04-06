@@ -1,6 +1,10 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
 @font-face{
-  font-family: 'AnonymousPro';
-  src:  url('./fonts/AnonymousPro/AnonymiceProNerdFont-Regular.ttf') format('ttf');
+  font-family: AnonymousPro;
+  src:  url('fonts/AnonymousPro/AnonymiceProNerdFont-Regular.ttf') format('ttf');
+  font-style: normal;
+  font-weight: normal;
 }
 
 :root{
@@ -15,7 +19,7 @@
 body{
   background-color: var(--bg-color);
   color: var(--fg-color);
-  font-family: 'AnonymicePro', sans-serif;
+  font-family: 'AnonymousPro', monospace;
 }
  /* Estilando el nav principal*/
 .main-nav {
@@ -40,6 +44,7 @@ body{
 
   & ul:last-child{
     justify-content: flex-end;
+    column-gap: 10px;
   } 
 
   & img{
