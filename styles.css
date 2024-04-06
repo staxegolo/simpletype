@@ -134,7 +134,7 @@ body{
   }
 }
 
-.game-paragraph{
+.game{
   box-sizing: border-box;
   width: 90%;
   min-height: 60vh;
