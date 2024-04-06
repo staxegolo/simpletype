@@ -137,7 +137,30 @@ body{
 .game-paragraph{
   box-sizing: border-box;
   width: 90%;
+  min-height: 60vh;
   max-width: 1080px;
-  margin: auto
+  margin: 20px auto;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
+  & > *{
+    color: var(--fg-s-color)
+  }
+
+  st-letter.right{
+    color: var(--fg-h-color);
+  }
+
+  st-letter.wrong{
+    color: var(--red-color);
+  }
+
+  st-word.worng{
+    text-decoration: underline;
+    text-decoration-color: var(--red-light-color);
+  }
+
+  
 }
