@@ -2,7 +2,43 @@
   --bg-color: #282828;
   --fg-color: #ebdbb3;
 }
+
+*, ::after, ::before{
+  margin: 0;
+  padding: 0;
+}
 body{
   background-color: var(--bg-color);
   color: var(--fg-color);
+}
+ /* Estilando el nav principal*/
+.main-nav {
+  margin:0;
+  padding: 10px;
+  outline: solid red 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+  }
+
+  & ul:first-child{
+    justify-content: flex-start;
+    font-size: 2em;
+  } 
+
+  & ul:last-child{
+    justify-content: flex-end;
+  } 
+
+  & img{
+    height: 1em;
+    aspect-ratio: auto;
+    vertical-align: text-top;
+  }
 }
