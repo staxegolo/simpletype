@@ -222,12 +222,19 @@ body{
 
   & button , & button:focus-visible{
     border: none;
+    font-size:  2em !important;
     background-color: transparent;
     font-family: 'AnonymousPro', monospace;
     font-size: 1em;
     color: inherit;
     position: absolute;
-    right: 1em;
+    right: .5em;
+    top: .5em;
+  }
+
+  & button:hover{
+    color: var(--yellow-light-color);
+    
   }
 
   & h2, p{
@@ -243,8 +250,8 @@ body{
   }  
 
   &::backdrop{
-    background-color: var(--bg-h-color);;
-    filter: blur();
+    background-color: var(--bg-h-color);
+    opacity: .8;
   }
 }
 
