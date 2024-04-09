@@ -39,42 +39,52 @@
           >SimpleType
         </li>
 
-        <li title="Empezar prueba"> <i class="nf nf-md-keyboard"></i> </li>
-        <li title="clasificacion"> <i class="nf nf-fae-crown"></i> </li>
-        <li title="Sobre mí"> <i class="nf nf-fa-info"></i> </li>
-        <li title="configuracion"> <i class="nf nf-oct-gear"></i> </li>
+        <li title="Empezar prueba" hidden> <i class="nf nf-md-keyboard"></i> </li>
+        <li title="clasificacion" hidden> <i class="nf nf-fae-crown"></i> </li>
+        <li title="Sobre mí" id="about-button"> <i class="nf nf-fa-info"></i> </li>
+        <li title="configuracion" hidden> <i class="nf nf-oct-gear"></i> </li>
       </ul>
 
       <ul>
-        <li> <i class="nf nf-md-bell"></i> </li>
-        <li> <i class="nf nf-fa-user_o"></i> </li>
+        <li> <i class="nf nf-md-bell" hidden></i> </li>
+        <li> <i class="nf nf-fa-user_o" hidden></i> </li>
       </ul>
 
     </nav>
 
     <section class="select-time">
-      <label><input type="radio" name="tiempo" value="10"> 15sec</label>
-      <label><input type="radio" name="tiempo" value="10" checked> 30sec</label>
-      <label><input type="radio" name="tiempo" value="10"> 60sec</label>
-      <label><input type="radio" name="tiempo" value="10"> 120sec</label>
+      <label><input type="radio" name="tiempo" value="15"> 15sec</label>
+      <label><input type="radio" name="tiempo" value="30" checked> 30sec</label>
+      <label><input type="radio" name="tiempo" value="60"> 60sec</label>
+      <label><input type="radio" name="tiempo" value="120"> 120sec</label>
     </section>
 
     <main class="game">
       <label>
-        <input type="text">
+        <input type="text" autofocus >
         
-        <h3 class="tiempo">0</h3>
+        <h3 class="tiempo"></h3>
         <br>
         <p>
           
         </p>
+        <p class="message"><span>Empieza a teclear</span><button><i class="nf nf-md-reload"></i></button></p>
       </label>
     </main>
 
-    <footer class="main-footer">
-      <a>github</a>
-      <a>comparte</a>
-    </footer>
+    <dialog class="modal" id="about-modal">
+      <button id="about-close"><i class="nf nf-md-close_circle"></i></button>
+      <h2>Sobre la pagina</h2>
+      <p>Esta pagina es un clon de monkeytype hecho con propositos recreativos. 
+        Si quieres jugar el original pueder ir al siguiente link: <a href="https://monkeytype.com" noreferrer >monkeytype.com</a>
+      </p>
+
+      <h2>Contacto</h2>
+      <p>Mi nombre es <strong>Stewart Axel Gomez Lozada</strong>, aqui me puedes contactar</p>
+      
+
+    </dialog>
+
     <script src="script.js"></script>
   </body>
 </html>

@@ -145,6 +145,7 @@ body{
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  max-height: 1em;
 
   & > *{
     color: var(--fg-s-color)
@@ -162,10 +163,99 @@ body{
     text-decoration: underline;
     text-decoration-color: var(--red-light-color);
   }
+  st-letter.active{
+    position: relative;
+
+    &::before{
+      font-size: larger;
+      content: '|';
+      position: absolute;
+      right: 50%;
+      top: -15%;
+      color: var(--yellow-color);
+      animation: blink .5s ease-in-out infinite;
+    }
+
+    &.end::before{
+      left: 50%;
+    }
+
+  }
 
   .tiempo{
     color: var(--yellow-light-color)
   }
 
+  & input[type='text']{
+    position: absolute;
+    opacity: 0;
+    top: -200px;
+  }
+
+  & .message{
+    margin-top: 20px ;
+    color: var(--fg-s-color);
+    text-align: center;
+    font-size: .8em;
+
+    & button{
+      border: none;
+      background-color: transparent;
+      font-family: 'AnonymousPro', monospace;
+      font-size: 1em;
+      color: inherit;
+    }
+  }
+  
+}
+
+.modal{
+  box-sizing: border-box;
+  max-height: 70%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'AnonymousPro', monospace;
+  background-color: var(--bg-color);
+  color:var(--fg-color);
+  border: none;
+
+  & button , & button:focus-visible{
+    border: none;
+    background-color: transparent;
+    font-family: 'AnonymousPro', monospace;
+    font-size: 1em;
+    color: inherit;
+    position: absolute;
+    right: 1em;
+  }
+
+  & h2, p{
+    margin-bottom: 1em;
+  }
+
+  & h2{
+    color: var(--fg-s-color)
+  }
+
+  & a{
+    color: var(--fg-h-color);
+  }  
+
+  &::backdrop{
+    background-color: var(--bg-h-color);;
+    filter: blur();
+  }
+}
+
+
+@keyframes blink {
+  0%, 100%{
+    opacity: 100%;
+  }
+
+  33%{
+    opacity: 0%;
+  }
   
 }
