@@ -1,6 +1,6 @@
 //cargamos los elemento del DOM
 const $input = document.querySelector('input[type="text"]');
-const $parrafoJuego = document.querySelector(".game p");
+const $parrafoJuego = document.querySelector(".game .playground");
 const $tiempo = document.querySelector(".tiempo");
 const $message = document.querySelector(".message span");
 const $button = document.querySelector(".message button");
@@ -35,6 +35,7 @@ $input.addEventListener('input',(event) =>{
         ($currentLetter)? $currentLetter.classList.remove('active', 'end') : $currentWord.querySelector('st-letter:last-child').classList.remove('active', 'end');
 
         $currentWord = $currentWord.nextElementSibling;
+        $currentWord?.scrollIntoView()
         $letters = $currentWord.querySelectorAll('st-letter');
         $currentLetter = $letters[0];
         $currentLetter.classList.add('active');
@@ -73,7 +74,16 @@ type specimen book. It has survived not only five
 centuries, but also the leap into electronic 
 typesetting, remaining essentially unchanged. 
 It was popularised in the 1960s with the release of
- Letraset sheets containing Lorem`;
+ Letraset sheets containing Lorem Lorem Ipsum is simply dummy 
+ text of the printing and typesetting industry. 
+ Lorem Ipsum has been the industry's standard dummy 
+ text ever since the 1500s, when an unknown printer 
+ took a galley of type and scrambled it to make a H
+ type specimen book. It has survived not only five 
+ centuries, but also the leap into electronic 
+ typesetting, remaining essentially unchanged. 
+ It was popularised in the 1960s with the release of
+  Letraset sheets containing Lorem`;
     let parsedText = textoPrueba.split(" ").map((word)=> word.trim().split(''));
     let tagedText = parsedText.reduce((tagedWords, word) => 
         tagedWords + 
@@ -99,6 +109,7 @@ function initGame(){
     $currentLetter = $letters[0];
     errorFlag = 0
     $currentLetter.classList.add('active')
+    $currentWord.scrollIntoView()
 
     //iniciamos el tiempo
     clearInterval(intervalID)
